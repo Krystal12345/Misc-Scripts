@@ -34,13 +34,14 @@ def Main():
        print mp3file
        print newname
        os.rename(mp3file, newname)
-       question = "[sound:" + newname +"]"
-
-       if not english:
-	   answer =content[10:]
-       else:
-	   answer = english[0] + "   " + question
-       writer.writerow([question, answer])
+      question = chinese
+          if not english:
+	   answer =content[10:] +  "   
+	   " +   "[sound:" + newname +"]"
+           else:
+	   answer = english[0] + "   " 
+	   +  "[sound:" + newname +"]"
+     writer.writerow([question, answer])
        fh.close()
     del writer
       
